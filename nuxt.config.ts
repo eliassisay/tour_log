@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
 
-  modules: ["@nuxt/eslint", "@nuxt/icon"],
+  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode"],
   eslint: {
     config: {
       standalone: false,
@@ -24,5 +24,8 @@ export default defineNuxtConfig({
         allow: ["../node_modules"],
       },
     },
+  },
+  colorMode: {
+    dataValue: "theme",
   },
 });
