@@ -20,7 +20,11 @@ jobs:
         with:
           node-version: 22.x
           cache: pnpm # Cache pnpm dependencies
+      - name: Clear pnpm cache
+        run: pnpm store prune
       - name: Install dependencies
         run: pnpm install
       - name: Run ESLint
         run: pnpm lint
+      - name: Clear pnpm cache
+        run: pnpm store prune
