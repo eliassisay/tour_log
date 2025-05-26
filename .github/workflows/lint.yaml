@@ -12,13 +12,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
         with:
-          version: 10.x
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+          version: 10.5.2
+      - uses: actions/setup-node@v4
         with:
           node-version: 22.x
+          cache: pnpm
       - run: pnpm install
       - run: pnpm lint
