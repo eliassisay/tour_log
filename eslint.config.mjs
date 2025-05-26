@@ -13,7 +13,7 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
-  ignores: ["./src/github/schema.docs.graphql"],
+  ignores: [".pnpm-store/**"],
 }, {
   rules: {
     "ts/consistent-type-definitions": ["error", "type"],
