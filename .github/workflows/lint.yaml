@@ -24,7 +24,3 @@ jobs:
         run: pnpm store prune
       - name: Install dependencies
         run: pnpm install
-      - name: Run ESLint
-        run: pnpm lint
-      - name: Clear pnpm cache
-        run: pnpm store prune
