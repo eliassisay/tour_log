@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +19,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - run: pnpm install
-      - run: pnpm lint
+          cache: pnpm # Cache pnpm dependencies
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run ESLint
+        run: pnpm lint
